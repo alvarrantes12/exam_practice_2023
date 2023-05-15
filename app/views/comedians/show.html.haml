@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b First name:
+  = @comedian.first_name
+%p
+  %b Last name:
+  = @comedian.last_name
+%p
+  %b Id number:
+  = @comedian.id_number
+
+= link_to 'Edit', edit_comedian_path(@comedian)
+\|
+= link_to 'Back', comedians_path

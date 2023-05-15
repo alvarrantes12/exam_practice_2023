@@ -1,0 +1,25 @@
+%h1 Listing comedians
+
+%table
+  %thead
+    %tr
+      %th First name
+      %th Last name
+      %th Id number
+      %th
+      %th
+      %th
+
+  %tbody
+    - @comedians.each do |comedian|
+      %tr
+        %td= comedian.first_name
+        %td= comedian.last_name
+        %td= comedian.id_number
+        %td= link_to 'Show', comedian
+        %td= link_to 'Edit', edit_comedian_path(comedian)
+        %td= link_to 'Destroy', comedian, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Comedian', new_comedian_path
