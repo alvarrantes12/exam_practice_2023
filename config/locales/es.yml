@@ -1,2 +1,56 @@
 es:
-  hello: "Hello world"
+  application:
+    created: Creado
+    update: Actualizado
+    destroyed: Eliminado
+    edit: Editar
+    back: Atras
+    can_not_be_saved: No se pudo guardar
+    delete: Eliminar
+    create: Crear
+    show: Mostrar
+    save: Guardar
+    comedian_list: Lista de Comediantes
+    list_of: Lista de
+    show: Mostrar
+    confirm: Confirmar
+    ok: Esta bien
+    cancel: Cancelar
+    new: Nuevo %{model}
+    select: Seleccione
+    edit_model: Editar %{model}
+  activerecord:
+    attributes:
+      comedian:
+        first_name: Nombre
+        last_name: Apellido
+        email: Correo
+        id_number: Identificacion
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+    modules: 
+      comedian:
+        one: Comediante
+        other: Comediantes
+    errors:
+      models:
+        comedian:
+          attributes:
+            first_name:
+              too_short: muy corto
+              too_long: muy largo
+              blank: vacio
+            last_name:
+              too_short: muy corto
+              too_long: muy largo
+              blank: vacio
+            id_number:
+              too_short: muy corto
+              too_long: Muy largo
+              blank: vacio
+            level: 
+              blank: vacio
+          
