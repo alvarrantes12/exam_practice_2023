@@ -1,2 +1,48 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista del %{model}
+    new_model: Nuevo %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    back: Atrás
+    cruds_available: Registro de comediantes
+    can_not_be_save: No se pudo guardar
+    created: Creado exitosamente
+    destroyed: Eliminado de forma exitosa
+    updated: Editado de forma exitosa
+    select: Seleccione
+  activerecord:
+    attributes:
+      comedian:
+          id_number: Identificación
+          level: Nivel
+          first_name: Nombre
+          last_name: Apellido
+          levels:
+            high: Alto
+            medium: Medio
+            low: bajo
+
+    modules:
+      comedians:
+        otherone: comediante
+
+    errors:
+      models:
+        comedian:
+          attributes:
+            first_name: 
+              blank: "en blanco favor ingresar un nombre"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            last_name:
+              blank: "en blanco favor ingresar un apellido"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            id_number: 
+              blank: "en blanco favor ingresar una identidad"
+            level:
+              blank: "en blanco favor ingresar un nivel"
