@@ -1,25 +1,30 @@
-%h1 Listing comedians
+%p{:style => "color: green"}= notice
+.div.m-4
+  .page.header
+    %h1.mb-4
+      = t('application.list_of', model: t('activerecord.modules.comedian.other'))
+    .float-end.pb-4
+      = link_to t('application.create'), new_comedian_path, class: "btn btn-primary"
 
-%table
-  %thead
+%table.table.table-striped
+  %thread 
     %tr
-      %th First name
-      %th Last name
-      %th Id number
+      %th= t('activerecord.attributes.comedian.first_name')
+      %th= t('activerecord.attributes.comedian.last_name')
+      %th= t('activerecord.attributes.comedian.id_number')
+      %th= t('activerecord.attributes.comedian.level')
       %th
       %th
       %th
+      
 
   %tbody
-    - @comedians.each do |comedian|
+    -@comedians.each do |comedian|
       %tr
         %td= comedian.first_name
         %td= comedian.last_name
         %td= comedian.id_number
-        %td= link_to 'Show', comedian
-        %td= link_to 'Edit', edit_comedian_path(comedian)
-        %td= link_to 'Destroy', comedian, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Comedian', new_comedian_path
+        %td= t("activerecord.attributes.comedian.levels.#{comedian.level}")
+        %td= link_to t('application.show'), comedian, class: "btn btn-info"
+        %td= link_to t('application.edit'), edit_comedian_path(comedian), class: "btn btn-success"
+        %td= button_to t('application.delete'), comedian, method: :delete, class: "btn btn-danger"
