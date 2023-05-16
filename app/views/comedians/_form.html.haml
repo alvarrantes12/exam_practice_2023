@@ -1,19 +1,36 @@
-= form_for @comedian do |f|
-  - if @comedian.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@comedian.errors.count, "error")} prohibited this comedian from being saved:"
-      %ul
-        - @comedian.errors.full_messages.each do |message|
-          %li= message
+=form_for @comedian do |f|
+  -if @comedian.errors.any?
+    .card.mx-4
+      .card-body
+        %div{style: 'color: red'}
+          %h2
+            = t('application.can_not_be_saved')
+          %ul
+          - @comedian.errors.full_messages.each do |message|
+            %li= message
 
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :id_number
-    = f.number_field :id_number
-  .actions
-    = f.submit 'Save'
+  .form-group.mx-4
+    = f.label :first_name, class: "form-label required"
+  .div.w-25
+    = f.text_field :first_name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :last_name, class: "form-label required"
+  .div.w-25
+    = f.text_field :last_name, autofocus: true, class: "form-control"
+  
+  .form-group.mx-4
+    = f.label :id_number, class: "form-label required"
+  .div.w-25
+    = f.number_field :id_number, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :level, class: "form-label required"
+  .div.w-25
+    = f.select(:level, options_for_select(levels, @comedian.level), {prompt: t('application.select')}, class: "form-control")
+
+  .row.mt-4
+    .col-3
+      = link_to t('application.back'), comedians_path, class: "btn  btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save'), class: "btn btn-primary btn-block"

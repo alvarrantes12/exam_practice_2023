@@ -1,15 +1,22 @@
 %p#notice= notice
 
-%p
-  %b First name:
-  = @comedian.first_name
-%p
-  %b Last name:
-  = @comedian.last_name
-%p
-  %b Id number:
-  = @comedian.id_number
-
-= link_to 'Edit', edit_comedian_path(@comedian)
-\|
-= link_to 'Back', comedians_path
+.div.m-4
+    .card
+        .card-body
+            %h5.card-title
+                = t('activerecord.attributes.comedian.first_name')
+            %p.card-text= @comedian.first_name
+            %h5.card-title
+                = t('activerecord.attributes.comedian.last_name')
+            %p.card-text= @comedian.last_name
+            %h5.card-title
+                = t('activerecord.attributes.comedian.id_number')
+            %p.card-text= @comedian.id_number
+            %h5.card-title
+                = t('activerecord.attributes.comedian.level')
+            %p.card-text= t("activerecord.attributes.comedian.levels.#{@comedian.level}")
+.row.mt-4
+    .offset-3.col-3
+        = link_to t('application.back'), comedians_path, class: "btn btn-secondary"
+    .col-3
+        = link_to t('application.edit'), edit_comedian_path(@comedian), class: "btn btn-success"

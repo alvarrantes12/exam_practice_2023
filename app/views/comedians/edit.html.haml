@@ -1,7 +1,8 @@
-%h1 Editing comedian
+%h1= t('application.edit_model', model: t('activerecord.modules.comedian.one'))
+= render "form", comedian: @comedian
+%br/
+%div
 
-= render 'form'
-
-= link_to 'Show', @comedian
+= link_to t('application.show'), @comedian
 \|
-= link_to 'Back', comedians_path
+= link_to t('application.back'), comedians_path
