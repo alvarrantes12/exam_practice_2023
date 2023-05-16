@@ -1,2 +1,33 @@
 es:
-  hello: "Hello world"
+  application:
+    list_of: Lista del %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    select: Seleccionar
+    cruds_available: CRUDs disponibles
+    back: Atrás
+    save: Guardar
+    director: Director
+    created: Creado exitosamente
+    updated: Editado exitosamente
+    deleted: Borrado exitosamente
+    can_not_be_saved: No se pudo guardar
+  activerecord:
+    modules:
+      comedian:
+        one: Comediante
+        other: Comediantes
+    attributes:
+      comedian:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Número de identificación
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+
