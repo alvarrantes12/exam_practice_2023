@@ -1,2 +1,36 @@
 es:
-  hello: "Hello world"
+  activerecord:
+    modules:
+      comedian:
+        other: comediantes
+        one: comediante
+    attributes:
+      comedian:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: ID
+        level: Nivel
+        levels:
+          low: Bajo
+          medium: Medio
+          high: Alto
+  application:
+    show: Mostrar
+    edit: Editar
+    delete: Borrar
+    create: Crear
+    list_of_model: Lista de %{model}
+    show_model: Mostrando %{model}
+    edit_model: Editando %{model}
+    new_model: Nuevo %{model}
+    select: Niveles
+    cant_saved: Comediante no guardado
+    created: Comediante creado
+    updated: Comediante actualizado
+    destroyed: Comediante eliminado
+    back: Atras
+    save: Guardar
+
+
+
+  
