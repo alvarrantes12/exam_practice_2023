@@ -1,2 +1,56 @@
 es:
   hello: "Hello world"
+  application:
+    list_of: Lista de %{model}
+    new_model: Nuevo %{model}
+    show: Mostrar
+    edit: Editar
+    save: Guardar
+    delete: Eliminar
+    create: Crear
+    cruds_available: CRUD Disponibles
+    back: Atrás
+    can_not_be_saved: No se pudo guardar
+    editing_model: Editando %{model}
+    created: Creado exitosamente
+    updated: Actualizado exitosamente
+    destroyed: Eliminado exitosamente
+  activerecord: 
+    attributes:
+      comedian:
+        first_name: Nombre
+        last_name:  Apellido
+        id_number:  Número de identificación
+        level: Nivel
+        levels:
+          high: Alto
+          medium: Medio
+          low: Bajo
+    modules:
+      comedian:
+        one: Comediante
+        other: Comediantes
+      joke:
+        one: Chiste
+        other: Chistes
+      historical:
+        one: Historial
+        other: Historiales
+    errors:
+      models:
+        comedian:
+          attributes:
+            first_name:
+              blank: es requerido
+              too_long: demasiado largo
+            last_name:
+              blank: es requerido
+              too_long: demasiado largo
+            id_number:
+              blank: es requerido
+              too_short: debe de tener más de 8 números
+              taken: debe ser único
+              too_long: demasiado largo
+            level:
+              blank: es requerido
+  
