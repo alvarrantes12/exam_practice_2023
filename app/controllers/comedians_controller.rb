@@ -17,6 +17,7 @@ class ComediansController < ApplicationController
     @comedian = Comedian.new(comedian_params)
 
     if @comedian.save
+      JokesService.new.build_joke
       redirect_to comedian_url(@comedian), notice: t("application.created")
     else
       render :new, status: :unprocessable_entity
