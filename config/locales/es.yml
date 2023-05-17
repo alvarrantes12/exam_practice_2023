@@ -1,2 +1,53 @@
 es:
-  hello: "Hello world"
+  application:
+    back: Volver
+    edit: Editar
+    show: Mostrar
+    save: Guardar
+    create: Crear
+    list_of: Lista de %{model}
+    edit_model: Editar al %{model} %{other_model}
+    new_model: Nuevo %{model}
+    can_not_be_saved: No se pudo guardar
+    crud_message:
+      male:
+        create_message_model: "%{model} creado"
+        update_message_model: "%{model} actualizado"
+        delete_message_model: "%{model} eliminado"
+      female:
+        create_message_model: "%{model} creada"
+        update_message_model: "%{model} actualizada"
+        delete_message_model: "%{model} eliminada"
+  activerecord:
+    attributes:
+      comedian:
+        first_name: Nombre
+        last_name: Apellido
+        id_number: Identificación
+        level: Nivel
+        levels:
+          low: Bajo
+          half: Medio
+          high: Alto
+    modules:
+      comedian:
+        one: Comediante
+        other: Comediantes
+    errors:
+      models:
+        comedian:
+          attributes:
+            first_name:
+              blank: no puede estar en blanco
+              too_long: debe de tener maximo 10 caracteres
+            last_name:
+              blank: no puede estar en blanco
+              too_long: debe de tener máximo 15 caracteres
+            id_number:
+              blank: no puede estar en blanco
+              not_a_number: debe ser un numero
+              greater_than: debe ser de minimo 8 digitos
+              less_than: debe ser de maximo 10 digitos
+              taken: debe ser unico
+            level:
+              blank: no puede estar en blanco
