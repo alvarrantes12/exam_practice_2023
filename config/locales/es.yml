@@ -66,6 +66,8 @@ es:
               too_long: es muy largo
             level:
               blank: no tiene contenido
+            manager:
+              required: es obligatorio
         event:
           attributes:
             comedian:
@@ -80,6 +82,12 @@ es:
             comedian: 
               required: es obligatorio
             contract:
+              required: es obligatorio
+            comedian:
+              blank: no tiene contenido
+              required: es obligatorio
+            contract:
+              blank: no tiene contenido
               required: es obligatorio
         contract:
           attributes:

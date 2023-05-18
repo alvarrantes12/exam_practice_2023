@@ -5,8 +5,9 @@ RSpec.describe Comedian, type: :model do
   subject{
     described_class.new(first_name: "Test2",
                         last_name: "Test2L",
-                        id_number: 123456789,
-                        level: 1
+                        id_number: 123451719,
+                        level: 1,
+                        manager: Manager.create!(first_name: "Nelson", last_name: "Baltodano")
                        )
   }
 
