@@ -1,10 +1,15 @@
 es:
   activerecord:
     modules:
+      event:
+        other: eventos
+        one: evento
       comedian:
         other: comediantes
         one: comediante
     attributes:
+      event:
+        name: Nombre del evento
       comedian:
         first_name: Nombre
         last_name: Apellido
@@ -23,11 +28,11 @@ es:
     show_model: Mostrando %{model}
     edit_model: Editando %{model}
     new_model: Nuevo %{model}
-    select: Niveles
+    select: Seleccionar
     cant_saved: Comediante no guardado
-    created: Comediante creado
-    updated: Comediante actualizado
-    destroyed: Comediante eliminado
+    created: Creado exitosamente
+    updated: Actualizado exitosamente
+    destroyed: Eliminado exitosamente
     back: Atras
     save: Guardar
 

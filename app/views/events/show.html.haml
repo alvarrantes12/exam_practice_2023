@@ -1,0 +1,14 @@
+%h1= t('application.show_model', model: t('activerecord.modules.event.one'))
+
+.div.m-4 
+  .card 
+    .card-body 
+      %h5.card-title
+        = t('activerecord.attributes.event.name')
+      %p.card-text= @event.name
+
+  .row.nt-4 
+    .offset-3.col-3
+      = link_to t('application.back'), events_path, class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_event_path(@event), class: "btn btn-success"
