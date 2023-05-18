@@ -5,6 +5,7 @@
       = t('application.list_of', model: t('activerecord.modules.comedian.other'))
     .float-end.pb-4
       = link_to t('application.create'), new_comedian_path, class: "btn btn-primary"
+      = link_to t('application.back'), root_path, class: "btn btn-secondary btn-block" 
 
 %table.table.table-striped
   %thread 
@@ -13,6 +14,7 @@
       %th= t('activerecord.attributes.comedian.last_name')
       %th= t('activerecord.attributes.comedian.id_number')
       %th= t('activerecord.attributes.comedian.level')
+      %th= t('activerecord.attributes.comedian.manager')
       %th
       %th
       %th
@@ -25,6 +27,7 @@
         %td= comedian.last_name
         %td= comedian.id_number
         %td= t("activerecord.attributes.comedian.levels.#{comedian.level}")
+        %td= comedian.manager.first_name + " " + comedian.manager.last_name
         %td= link_to t('application.show'), comedian, class: "btn btn-info"
         %td= link_to t('application.edit'), edit_comedian_path(comedian), class: "btn btn-success"
         %td= button_to t('application.delete'), comedian, method: :delete, class: "btn btn-danger"

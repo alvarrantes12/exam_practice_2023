@@ -28,6 +28,12 @@
     .div.w-25
       = f.select(:level, options_for_select(levels, @comedian.level), {prompt: t('application.select')}, class: "form-control")
 
+  .form-group.mx-4
+    = f.label :manager, class: "form-label required"
+    .div.w-25
+      = f.select(:manager_id, options_for_select(@managers, @comedian.manager), {prompt: t('application.select')}, class: "form-control")
+      
+
   .row.mt-4 
     .offset-1.col-1
       = link_to t('application.back'), comedians_path, class: "btn btn-secondary btn-block" 

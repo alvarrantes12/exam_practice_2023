@@ -10,6 +10,7 @@ gem "bootsnap", require: false
 gem 'font-awesome-sass', '~> 6.4.0'
 gem 'haml'
 gem "importmap-rails"
+gem 'httparty'
 gem "jbuilder"
 gem 'jquery-rails'
 gem "pg", "~> 1.1"

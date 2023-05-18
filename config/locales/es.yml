@@ -2,6 +2,7 @@ es:
   application:
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
+    edit_model: Editar %{model}
     show: Mostrar
     new: Nuevo
     edit: Editar
@@ -12,6 +13,9 @@ es:
     can_not_be_saved: No se pudo guardar
     select: Seleccione
     back: Atrás
+    created: Creado exitosamente
+    updated: Actualizado exitosamente
+    destroyed: Eliminado exitosamente
   activerecord:
     attributes:
       comedian:
@@ -19,28 +23,66 @@ es:
         last_name: Apellido
         id_number: Identificacion
         level: Nivel
+        manager: Manager
         levels:
           high: Alto
           medium: Medio
           low: Bajo
+      event:
+        name: Nombre
+        comedian: Comediante
+      contract:
+        location: Ubicación
+      history:
+        version: Versión
+        comedian: Comediante
+        contract: Contrato
     modules:
       comedian:
         other: Comediantes
         one: Comediante
+      event:
+        other: Eventos
+        one: Evento
+      contract:
+        other: Contratos
+        one: Contrato
+      history:
+        other: Historiales
+        one: Historial
     errors:
       models:
         comedian:
           attributes:
             first_name:
               blank: no tiene contenido
+              too_long: es muy largo
             last_name:
               blank: no tiene contenido
+              too_long: es muy largo
             id_number:
               blank: no tiene contenido
               too_short: es muy corto
               too_long: es muy largo
             level:
               blank: no tiene contenido
-
-
+        event:
+          attributes:
+            comedian:
+              required: es obligatorio
+              blank: no tiene contenido
+            name:
+              blank: no tiene contenido
+        history:
+          attributes:
+            version:
+              blank: no tiene contenido
+            comedian: 
+              required: es obligatorio
+            contract:
+              required: es obligatorio
+        contract:
+          attributes:
+            location:
+              blank: no tiene contenido
    

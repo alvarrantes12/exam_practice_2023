@@ -1,8 +1,4 @@
 %h1 
-    = t('application.edit', model: t('activerecord.modules.comedian.one'))
+    = t('application.edit_model', model: t('activerecord.modules.comedian.one'))
 
 = render 'form'
-
-= link_to 'Show', @comedian
-\|
-= link_to 'Back', comedians_path

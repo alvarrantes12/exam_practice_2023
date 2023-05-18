@@ -1,0 +1,25 @@
+=form_for @event, validates: true do |f|
+  -if @event.errors.any?
+    .card.mx-4
+      %div{style: 'color: red'}
+        %h2
+          = t('application.can_not_be_saved')
+        %ul
+          -  @event.errors.each do |error|
+            %li= error.full_message
+
+  .form-group.mx-4 
+    = f.label :name, class: "form-label required"
+    .div.w-25 
+      = f.text_field :name, autofocus: true, class: "form-control"
+
+  .form-group.mx-4
+    = f.label :comedian, class: "form-label required"
+    .div.w-25
+      = f.select(:comedian_id, options_for_select(@comedians, @event.comedian), {prompt: t('application.select')}, class: "form-control")
+
+  .row.mt-4 
+    .offset-1.col-1
+      = link_to t('application.back'), events_path, class: "btn btn-secondary btn-block" 
+    .col-2
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
