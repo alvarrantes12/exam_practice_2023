@@ -6,6 +6,12 @@
       %h5.card-title
         = t('activerecord.attributes.record.version')
       %p.card-text= @record.version
+      %h5.card-title
+        = t('activerecord.attributes.record.comedian.first_name')
+      %p.card-text= @record.comedian.first_name
+      %h5.card-title
+        = t('activerecord.attributes.record.contract.location')
+      %p.card-text= @record.contract.location
 
   .row.nt-4 
     .offset-3.col-3

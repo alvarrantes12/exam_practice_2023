@@ -6,6 +6,9 @@
       %h5.card-title
         = t('activerecord.attributes.event.name')
       %p.card-text= @event.name
+      %h5.card-title
+        = t('activerecord.attributes.event.comedian.first_name')
+      %p.card-text= @event.comedian.first_name
 
   .row.nt-4 
     .offset-3.col-3

@@ -5,7 +5,8 @@ RSpec.describe Comedian, type: :model do
     described_class.new(first_name: "Franco",
                         last_name: "Escamilla",
                         id_number: 11111111,
-                        level: 2)
+                        level: 2,
+                        manager: Manager.create(first_name: "David", last_name: "Hidalgo"))
   }
 
   it "valid with valid attributes" do

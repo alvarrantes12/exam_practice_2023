@@ -6,7 +6,8 @@ RSpec.describe Event, type: :model do
                         comedian: Comedian.create!(first_name: "Pepe",
                         last_name: "Guarnizo",
                         id_number: 123456788,
-                        level: 0))
+                        level: 0,
+                        manager: Manager.create(first_name: "David", last_name: "Hidalgo")))
   }
 
   it "valid with valid attributes" do

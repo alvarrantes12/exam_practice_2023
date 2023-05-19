@@ -16,11 +16,19 @@ es:
     attributes:
       record:
         version: Versión
+        comedian:
+          first_name: Comediante
+        contract:
+          location: Locación del evento
       contract:
         location: Locación
       event:
+        comedian:
+          first_name: Comediante
         name: Nombre del evento
       comedian:
+        manager:
+          first_name: Representante
         first_name: Nombre
         last_name: Apellido
         id_number: ID

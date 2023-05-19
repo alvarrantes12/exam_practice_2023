@@ -10,6 +10,8 @@
   %thread
     %tr
       %th= t('activerecord.attributes.record.version')
+      %th= t('activerecord.attributes.record.comedian.first_name')
+      %th= t('activerecord.attributes.record.contract.location')
       %th
       %th
       %th
@@ -18,6 +20,8 @@
     - @records.each do |record|
       %tr
         %td= record.version
+        %td= record.comedian.first_name
+        %td= record.contract.location
         %td= link_to t('application.show'), record, class: "btn btn-info"
         %th= link_to t('application.edit'), edit_record_path(record), class: "btn btn-success"
         %td= button_to t('application.delete'), record, method: :delete, class: "btn btn-danger"

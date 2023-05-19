@@ -13,6 +13,7 @@
       %th= t('activerecord.attributes.comedian.last_name')
       %th= t('activerecord.attributes.comedian.id_number')
       %th= t('activerecord.attributes.comedian.level')
+      %th= t('activerecord.attributes.comedian.manager.first_name')
       %th
       %th
       %th
@@ -24,6 +25,7 @@
         %td= comedian.last_name
         %td= comedian.id_number
         %td= comedian.level
+        %td= comedian.manager.first_name
         %td= link_to t('application.show'), comedian, class: "btn btn-info"
         %th= link_to t('application.edit'), edit_comedian_path(comedian), class: "btn btn-success"
         %td= button_to t('application.delete'), comedian, method: :delete, class: "btn btn-danger"
