@@ -1,7 +1,7 @@
 class Comedian < ApplicationRecord
     has_many :events
     has_many :records
-    has_many :contracts, through :records
+    has_many :contracts, through: :records
     
     validates :first_name, presence: true, length: {maximum: 10} 
     validates :last_name, presence: true, length: {maximum: 15}

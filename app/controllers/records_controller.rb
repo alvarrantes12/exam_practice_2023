@@ -1,5 +1,10 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[ show edit update destroy ]
+  
+  before_action :set_comedians
+
+  before_action :set_contracts
+
 
   def index
     @records = Record.all
@@ -46,7 +51,7 @@ class RecordsController < ApplicationController
     end
 
     def set_contracts
-      @comedians = Contract.all.map {|contract| ["#{contract.location}", contract.id]}
+      @contracts = Contract.all.map {|contract| ["#{contract.location}", contract.id]}
     end
 
     def record_params
