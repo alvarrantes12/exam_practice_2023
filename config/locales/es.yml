@@ -24,11 +24,31 @@ es:
           levels:
             high: Alto
             medium: Medio
-            low: bajo
+            low: Bajo
+          manager: Gerente
+      evento: 
+        name: Nombre
+        start_date: Fecha de inicio
+        end_date: Hora de finalización
+      contract: 
+        location: Ubicación
+      record:
+        version: Versión
+        comedian: comediante
+        contract: contracto
+      
 
     modules:
       comedians:
         otherone: comediante
+      eventos:
+        other: eventos
+        comedian: Comediante
+      contracts: 
+        other: contratos
+
+      records:
+        other: Historial
 
     errors:
       models:
@@ -46,3 +66,25 @@ es:
               blank: "en blanco favor ingresar una identidad"
             level:
               blank: "en blanco favor ingresar un nivel"
+        contract:
+          attributes:
+            location: 
+              blank: "en blanco favor ingresar una ubicacion"
+              too_short: muy corto debe ser mayor a 3 letras
+        manager: 
+          attributes:
+            first_name: 
+              blank: "en blanco favor ingresar un nombre"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+            last_name:
+              blank: "en blanco favor ingresar un apellido"
+              too_short: muy corto debe ser mayor a 3 letras
+              too_long: demasiado largo
+        record:
+          attributes: 
+            version:
+              blank: "en blanco favor ingresar un apellido"
+
+
+      

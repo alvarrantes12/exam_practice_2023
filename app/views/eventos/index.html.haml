@@ -1,0 +1,27 @@
+%p{:style => "color: green"}= notice
+.div.m-4
+  .page.header 
+    %h1.mb-4
+      = t('application.list_of', model: t('activerecord.modules.eventos.other'))
+    .float-end.pb-4
+      = link_to t('application.create'), new_evento_path, class: "btn btn-primary"
+
+  %table.table.table-striped
+    %thread 
+      %tr
+        %th= t('activerecord.attributes.evento.name')
+        %th= t('activerecord.attributes.evento.start_date')
+        %th= t('activerecord.attributes.evento.end_date')
+        %th= t('activerecord.attributes.evento.comedian')
+        %th
+        %th
+    %tbody
+      -@eventos.each do |evento|
+        %tr
+          %td= evento.name
+          %td= evento.start_date.strftime("%d/%m/%Y %I:%M %P")
+          %td= evento.end_date.strftime("%d/%m/%Y %I:%M %P")
+          %td= evento.comedian.first_name + " " + evento.comedian.last_name
+          %td= link_to t('application.show'), evento, class: "btn btn-info"
+          %td= link_to t('application.edit'), edit_evento_path(evento), class: "btn btn-success"
+          %td= button_to t('application.delete'), evento, method: :delete, class: "btn btn-danger" 

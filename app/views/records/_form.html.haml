@@ -1,0 +1,29 @@
+= form_for @record do |f|
+  - if @record.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@record.errors.count, "error")} prohibited this record from being saved:"
+      %ul
+        - @record.errors.full_messages.each do |message|
+          %li= error.full_message
+              
+
+  .form-group.mx-4 
+    = f.label :version, class: "form-label required"
+    .div.w-25 
+      = f.text_field :version, autofocus: true, class: "form-control"
+  .form-group.mx-4 
+    = f.label :comedian, class: "form-label required"
+    .div.w-25 
+      = f.select(:comedian_id, options_for_select(@comedians, @records.comedian), {prompt: t('application.select')}, class: "form-control")
+     
+  .form-group.mx-4 
+    = f.label :contract, class: "form-label required"
+    .div.w-25 
+      = f.select(:contract_id, options_for_select(@contracts, @records.contract), {prompt: t('application.select')}, class: "form-control") 
+
+  .row.mt-4 
+    .offset-3.col-3 
+      = link_to t('application.back'), records_path , class: "btn btn-secondary btn-block"
+    .col-3 
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"
+

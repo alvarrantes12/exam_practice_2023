@@ -4,7 +4,7 @@ class CreateComedians < ActiveRecord::Migration[7.0]
       t.string :first_name
       t.string :last_name
       t.integer :id_number
-
+      t.belongs_to :manager
       t.timestamps
     end
   end

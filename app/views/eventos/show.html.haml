@@ -1,0 +1,28 @@
+%p#notice= notice
+
+.div.m-4
+  .card 
+    .card-body 
+      %h5.card-title
+        = t("activerecord.attributes.evento.name")
+      %p.card-text= @evento.name
+
+      %h5.card-title
+        = t("activerecord.attributes.evento.start_date")
+      %p.card-text= @evento.start_date
+
+      %h5.card-title
+        = t("activerecord.attributes.evento.end_date")
+      %p.card-text= @evento.end_date
+
+      %h5.card-title
+        = t('activerecord.attributes.eventos.comedian')
+      %p.card-text= @event.comedian.first_name + " " + @event.comedian.last_name
+
+
+
+  .row.mt-4 
+    .offset-3.col-3 
+      = link_to t('application.back'), eventos_path, class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_evento_path(@evento), class: "btn btn-success"

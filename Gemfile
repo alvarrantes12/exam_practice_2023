@@ -9,6 +9,7 @@ gem 'bootstrap'
 gem "bootsnap", require: false
 gem 'font-awesome-sass', '~> 6.4.0'
 gem 'haml'
+gem 'httparty'
 gem "importmap-rails"
 gem "jbuilder"
 gem 'jquery-rails'
@@ -30,6 +31,7 @@ group :development do
   gem "haml-rails"
   gem "html2haml"
   gem "web-console"
+  gem 'pry'
 end
 
 group :test do

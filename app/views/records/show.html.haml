@@ -1,0 +1,29 @@
+%p#notice= notice
+
+.div.m-4
+  .card 
+    .card-body 
+      %h5.card-title
+        = t("activerecord.attributes.record.version")
+      %p.card-text= @record.version
+
+
+      %h5.card-title
+        = t("activerecord.attributes.record.comedian")
+      %p.card-text= @record.comedian.first_name + "" +  @record.comedian.last_name
+
+      %h5.card-title
+        = t("activerecord.attributes.record.contract")
+      %p.card-text= @record.contract.location
+
+
+      
+
+
+
+
+  .row.mt-4 
+    .offset-3.col-3 
+      = link_to t('application.back'), records_path, class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_record_path(@record), class: "btn btn-success"

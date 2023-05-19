@@ -1,0 +1,28 @@
+%p{:style => "color: green"}= notice
+.div.m-4
+  .page.header 
+    %h1.mb-4
+      = t('application.list_of', model: t('activerecord.modules.records.other'))
+    .float-end.pb-4
+      = link_to t('application.create'), new_record_path, class: "btn btn-primary"
+
+  %table.table.table-striped
+    %thread 
+      %tr
+        %th= t('activerecord.attributes.record.version')
+        %th= t('activerecord.attributes.record.contract')
+        %th= t('activerecord.attributes.record.comedian')
+        %th
+        %th
+        %th
+        %th
+    %tbody
+      -@records.each do |record|
+        %tr
+          %td= record.version
+          %td= record.contract.location
+          %td= record.comedian.first_name + "" + record.comedian.last_name
+          %td 
+          %td= link_to t('application.show'), record, class: "btn btn-info"
+          %td= link_to t('application.edit'), edit_record_path(record), class: "btn btn-success"
+          %td= button_to t('application.delete'), record, method: :delete, class: "btn btn-danger" 
