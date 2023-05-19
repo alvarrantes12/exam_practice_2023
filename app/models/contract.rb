@@ -1,4 +1,6 @@
 class Contract < ApplicationRecord
-    #Falta conexiones con otras tablas 
+    has_many :records
+    has_many :comedians, through :records
+     
     validates :location, presence: true
 end

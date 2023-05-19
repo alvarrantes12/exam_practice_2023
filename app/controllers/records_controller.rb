@@ -41,7 +41,15 @@ class RecordsController < ApplicationController
       @record = Record.find(params[:id])
     end
 
+    def set_comedians
+      @comedians = Comedian.all.map {|comedian| ["#{comedian.first_name} #{comedian.last_name}", comedian.id]}
+    end
+
+    def set_contracts
+      @comedians = Contract.all.map {|contract| ["#{contract.location}", contract.id]}
+    end
+
     def record_params
-      params.require(:record).permit(:version)
+      params.require(:record).permit(:version, :comedian_id, :contract_id)
     end
 end

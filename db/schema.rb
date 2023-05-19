@@ -45,8 +45,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_19_022745) do
 
   create_table "records", force: :cascade do |t|
     t.string "version"
+    t.bigint "comedian_id"
+    t.bigint "contract_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["comedian_id"], name: "index_records_on_comedian_id"
+    t.index ["contract_id"], name: "index_records_on_contract_id"
   end
 
 end
