@@ -1,0 +1,14 @@
+%h1= t('application.show_model', model: t('activerecord.modules.record.one'))
+
+.div.m-4 
+  .card 
+    .card-body 
+      %h5.card-title
+        = t('activerecord.attributes.record.version')
+      %p.card-text= @record.version
+
+  .row.nt-4 
+    .offset-3.col-3
+      = link_to t('application.back'), records_path, class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_record_path(@record), class: "btn btn-success"

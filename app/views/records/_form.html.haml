@@ -1,0 +1,21 @@
+= form_for @record, validate: true do |f|
+  -if @record.errors.any?
+    .card.mx-4
+      .card-body
+        %div{style: 'color: red'}
+          %h2
+            =t('application.cant_saved')
+          %ul
+            - @record.errors.each do |error|
+              %li= error.full_message
+
+  .form-group.mx-4
+    = f.label :version, class: "form-label required"
+    .div.w-25 
+      = f.text_field :version, autofocus: true, class: "form-control"
+
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), records_path, class: "btn btn-secondary btn-block"
+    .col-3
+      = button_tag t('application.save'), class: "btn btn-outline-success btn-block"

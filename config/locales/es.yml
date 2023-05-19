@@ -1,6 +1,9 @@
 es:
   activerecord:
     modules:
+      record:
+        other: historiales
+        one: historial
       contract:
         other: contratos
         one: contrato
@@ -11,6 +14,8 @@ es:
         other: comediantes
         one: comediante
     attributes:
+      record:
+        version: Versión
       contract:
         location: Locación
       event:
