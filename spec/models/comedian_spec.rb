@@ -4,7 +4,10 @@ RSpec.describe Comedian, type: :model do
   subject {
     described_class.new(first_name: "Jhon",
                         last_name: "Lennon",
-                        id_number: 12345678)
+                        id_number: 12345678,
+                        level: 1,
+                        manager: Manager.create(first_name: "Jesus",
+                                                last_name: "Rodriguez"))
   }
 
   it "valid with valid attributes" do
@@ -43,6 +46,11 @@ RSpec.describe Comedian, type: :model do
 
   it "is not valid with a id_number with more then 10 numbers" do
     subject.id_number = 123456789101112
+    expect(subject).to_not be_valid
+  end
+
+  it "is not valid without level" do
+    subject.level = nil
     expect(subject).to_not be_valid
   end
 end

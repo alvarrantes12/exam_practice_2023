@@ -17,6 +17,9 @@
       %h5.card-title
         = t('activerecord.attributes.comedian.level')
       %p.card-text= t("activerecord.attributes.comedian.levels.#{@comedian.level}")
+      %h5.card-title
+        = t('activerecord.attributes.comedian.manager')
+      %p.card-text= @comedian.manager.first_name
 
 .row.mt-4
   .offset-3.col-3

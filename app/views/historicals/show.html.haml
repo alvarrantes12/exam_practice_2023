@@ -1,0 +1,22 @@
+%h1= t('activerecord.modules.historical.one')
+
+%p#notice= notice
+
+.div.m-4
+  .card
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.historical.version')
+      %p.card-text= @historical.version
+      %h5.card-title
+        = t('activerecord.attributes.historical.comedian')
+      %p.card-text= @historical.comedian.first_name
+      %h5.card-title
+        = t('activerecord.attributes.historical.contract')
+      %p.card-text= @historical.contract.location
+      
+.row.mt-4
+  .offset-3.col-3
+    = link_to t('application.back'), historicals_path, class: "btn btn-secondary"
+  .col-3
+    = link_to t('application.edit'), edit_historical_path(@historical), class: "btn btn-success"

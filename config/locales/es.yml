@@ -1,6 +1,7 @@
 es:
   hello: "Hello world"
   application:
+    select: Seleccionar
     list_of: Lista de %{model}
     new_model: Nuevo %{model}
     show: Mostrar
@@ -15,7 +16,7 @@ es:
     created: Creado exitosamente
     updated: Actualizado exitosamente
     destroyed: Eliminado exitosamente
-  activerecord: 
+  activerecord:
     attributes:
       comedian:
         first_name: Nombre
@@ -26,6 +27,19 @@ es:
           high: Alto
           medium: Medio
           low: Bajo
+        manager: Representante
+      event:
+        name: Nombre del evento
+        comedian: Comediante
+      contract:
+        location: Locación
+      historical:
+        version: Versión
+        comedian: Comediante
+        contract: Contrato
+      manager:
+        first_name: Nombre
+        last_name:  Apellido
     modules:
       comedian:
         one: Comediante
@@ -33,13 +47,24 @@ es:
       joke:
         one: Chiste
         other: Chistes
+      event:
+        one: Evento
+        other: Eventos
       historical:
         one: Historial
         other: Historiales
+      contract:
+        one: Contrato
+        other: Contratos
+      manager:
+        one: Representante
+        other: Representantes
     errors:
       models:
         comedian:
           attributes:
+            manager:
+              required: es requerido
             first_name:
               blank: es requerido
               too_long: demasiado largo
@@ -52,5 +77,19 @@ es:
               taken: debe ser único
               too_long: demasiado largo
             level:
+              blank: es requerido
+        event:
+          attributes:
+            name:
+              blank: es requerido
+            comedian:
+              required: es requerido
+        contract: 
+          attributes:
+            location:
+              blank: es requerido
+        historical:
+          attributes:
+            version:
               blank: es requerido
   
