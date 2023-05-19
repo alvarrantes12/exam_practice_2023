@@ -1,0 +1,8 @@
+%h1= t('application.edit_model', model: t('activerecord.modules.contract.one'))
+= render "form", contract: @contract
+%br/
+%div
+
+= link_to t('application.show'), @contract
+\|
+= link_to t('application.back'), contracts_path

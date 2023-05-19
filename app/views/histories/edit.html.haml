@@ -1,0 +1,8 @@
+%h1= t('application.edit_model', model: t('activerecord.modules.history.one'))
+= render "form", history: @history
+%br/
+%div
+
+= link_to t('application.show'), @history
+\|
+= link_to t('application.back'), histories_path

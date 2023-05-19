@@ -1,4 +1,4 @@
-=form_for @comedian do |f|
+=form_for @comedian, validate: true do |f|
   -if @comedian.errors.any?
     .card.mx-4
       .card-body
@@ -28,6 +28,11 @@
     = f.label :level, class: "form-label required"
   .div.w-25
     = f.select(:level, options_for_select(levels, @comedian.level), {prompt: t('application.select')}, class: "form-control")
+
+  .form-group.mx-4
+    = f.label :manager, class: "form-label required"
+  .div.w-25
+    = f.select(:manager_id, options_for_select(@managers, @comedian.manager), {prompt: t('application.select')}, class: "form-control")
 
   .row.mt-4
     .col-3

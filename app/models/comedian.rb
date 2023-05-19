@@ -1,4 +1,10 @@
 class Comedian < ApplicationRecord
+    belongs_to :manager
+    
+    has_many :events
+
+    has_many :histories
+    has_many :contracts, through: :histories
 
     validates :first_name,presence: true, length: { maximum: 10 }
     validates :last_name,presence: true,length: { maximum: 15 }

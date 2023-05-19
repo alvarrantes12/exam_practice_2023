@@ -12,7 +12,7 @@ es:
     save: Guardar
     delete: Eliminar
     create: Crear
-    cruds_available: Tema disponible
+    cruds_available: CRUDs disponible
     can_not_be_saved: No se pudo guardar
     select: Seleccione
     back: Atrás
@@ -27,10 +27,32 @@ es:
           high: Alto
           medium: Medio
           low: Bajo
+        manager: Director
+      event:
+        name: Nombre
+        comedian: Comediante
+      contract:
+        location: Ubicación
+      history:
+        version: Versión
+        comedian: Comediante
+        contract: Contrato
     modules:
       comedian:
         one: Comediante
         other: Comediantes
+      event:
+        one: Evento
+        other: Eventos
+      contract:
+        one: Contrato
+        other: Contratos
+      history:
+        one: Historial
+        other: Historiales
+      manager:
+        one: Director
+        other: Directores
     errors:
       models:
         comedian:
@@ -49,3 +71,32 @@ es:
               taken: La identificacion ya existe
             level:
               blank: No puede estar en blanco
+            manager:
+              required: Se requiere llenar el espacio para continuar
+        event:
+          attributes:
+            comedian:
+              blank: El espacio esta en blanco
+              required: Se requiere llenar el espacio para continuar
+            name:
+              blank: El espacio esta en blanco
+        contract:
+          attributes:
+            location: 
+              blank: El espacio esta en blanco
+        history:
+          attributes:
+            version:
+              blank: El espacio esta en blanco
+            comedian:
+              required: Se requiere llenar el espacio para continuar
+            contract:
+              required: Se requiere llenar el espacio para continuar
+        manager:
+          attributes:
+            first_name:
+              blank: El espacio esta en blanco
+              too_short: Debe de tener un minimo de 5 caracteres
+            last_name:
+              blank: El espacio esta en blanco
+              too_short: Debe de tener un minimo de 5 caracteres
