@@ -1,6 +1,9 @@
 es:
   activerecord:
     modules:
+      contract:
+        other: contratos
+        one: contrato
       event:
         other: eventos
         one: evento
@@ -8,6 +11,8 @@ es:
         other: comediantes
         one: comediante
     attributes:
+      contract:
+        location: Locación
       event:
         name: Nombre del evento
       comedian:
