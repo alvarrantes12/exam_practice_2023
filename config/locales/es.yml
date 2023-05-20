@@ -9,6 +9,8 @@ es:
     edit_model: Editar al %{model} %{other_model}
     new_model: Nuevo %{model}
     can_not_be_saved: No se pudo guardar
+    crud_available: CRUDs diponibles
+    select: Seleccione
     crud_message:
       male:
         create_message_model: "%{model} creado"
@@ -25,14 +27,33 @@ es:
         last_name: Apellido
         id_number: Identificación
         level: Nivel
+        manager: Administrador
         levels:
           low: Bajo
           half: Medio
           high: Alto
+      history:
+        version: Version
+        comedian: Comediante
+        contract: Contrato
+      event:
+        name: Nombre
+        comedian: Comediante
+      contract:
+        location: Locacion
     modules:
       comedian:
         one: Comediante
         other: Comediantes
+      history:
+        one: Historial
+        other: Historiales
+      event:
+        one: Evento
+        other: Eventos
+      contract:
+        one: Contrato
+        other: Contratos
     errors:
       models:
         comedian:
@@ -51,3 +72,18 @@ es:
               taken: debe ser unico
             level:
               blank: no puede estar en blanco
+            manager:
+              required: es requerido
+        history:
+          attributes:
+            version:
+              blank: no puede estar en blanco
+            comedian:
+              required: es requerido
+            contract:
+              required: es requerido
+        event:
+          blank: no puede estar en blanco
+          required: es requerido
+        contract:
+          blank: no puede estar en blanco

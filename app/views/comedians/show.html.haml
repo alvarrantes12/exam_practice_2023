@@ -14,7 +14,10 @@
       %p.card-text= @comedian.id_number
       %h5.card-title
         = t('activerecord.attributes.comedian.level')
-      %p.card-text= @comedian.level
+      %p.card-text= t("activerecord.attributes.comedian.levels.#{@comedian.level}")
+      %h5.card-title
+        = t('activerecord.attributes.comedian.manager')
+      %p.card-text= @comedian.manager.first_name.concat(' ').concat(@comedian.manager.last_name)
 
   .row.mt-4
     .offset-3.col-3

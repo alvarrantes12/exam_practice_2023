@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   resources :comedians
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :histories
+  resources :contracts
+  resources :events
 
-  # Defines the root path route ("/")
-  # root "articles#index"'
+  scope module: :api do
+    resources :managers
+  end
+
   root "dashboards#index"
 end
+

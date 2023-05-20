@@ -1,0 +1,14 @@
+%p#notice= t('activerecord.modules.contract.one')
+
+.div.n-4
+  .card
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.contract.location')
+      %p.card-text= @contract.location
+
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), contracts_path(@contract), class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_contract_path(@contract), class: "btn btn-success"

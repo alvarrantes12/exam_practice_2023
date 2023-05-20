@@ -1,0 +1,24 @@
+%p#notice= t('activerecord.modules.history.one')
+
+.div.n-4
+  .card
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.history.version')
+      %p.card-text= @history.version
+
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.history.comedian')
+      %p.card-text= @history.comedian.first_name.concat(' ').concat(@history.comedian.last_name)
+    
+    .card-body
+      %h5.card-title
+        = t('activerecord.attributes.history.contract')
+      %p.card-text= @history.contract.location  
+
+  .row.mt-4
+    .offset-3.col-3
+      = link_to t('application.back'), histories_path(@history), class: "btn btn-secondary"
+    .col-3
+      = link_to t('application.edit'), edit_history_path(@history), class: "btn btn-success"
