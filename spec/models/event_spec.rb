@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Event, type: :model do
     subject {
       described_class.new(name: "VIVA Fiesta",
-                          comedian: Comedian.create(first_name: "Robert", last_name: "Trujillo", id_number: 12345678))
+                          comedian: Comedian.create(first_name: "Robert", last_name: "Trujillo", id_number: 12345678, level:1, manager_id: 2))
     }
 
   it "is valid with valid attributes" do

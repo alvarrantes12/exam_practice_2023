@@ -48,8 +48,8 @@ RSpec.describe Comedian, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid with a id_number with more than 100000 numbers" do
-    subject.id_number = "100000"
+  it "is not valid with a id_number with less than 1000000 numbers" do
+    subject.id_number = "1000000"
     expect(subject).to_not be_valid
   end
 
